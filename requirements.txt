@@ -4,3 +4,4 @@ numpy
 tensorflow-cpu
 Pillow
 streamlit-drawable-canvas
+scikit-learn
