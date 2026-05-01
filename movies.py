@@ -37,7 +37,6 @@ def load_model():
     for i in range(n):
         segment = ' '.join(words[i*seg_size:(i+1)*seg_size])
         score = sia.polarity_scores(segment)['compound']
-        # give ending segments more weight
         if i >= 8:
             score = score * 1.5
         scores.append(score)
@@ -118,7 +117,6 @@ with col1:
     for i in range(n):
         segment = ' '.join(words[i*seg_size:(i+1)*seg_size])
         score = sia.polarity_scores(segment)['compound']
-        # give ending segments more weight
         if i >= 8:
             score = score * 1.5
         scores.append(score)
